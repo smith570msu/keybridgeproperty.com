@@ -6,7 +6,7 @@
  * Leave empty to disable (tags will not fire).
  */
 const FORM_ENDPOINT = 'https://services.leadconnectorhq.com/hooks/j794bCglqnNGvhcOeHug/webhook-trigger/4367eb1c-1e4e-4ef8-a3d5-b4ed768728e0';
-const GA4_ID       = ''; // e.g. 'G-XXXXXXXXXX'
+const GA4_ID       = 'G-QTRJKES4GX';
 const ADS_ID       = ''; // e.g. 'AW-XXXXXXXXXX'
 const META_PIXEL_ID = ''; // e.g. '123456789012345'
 
@@ -18,15 +18,14 @@ const META_PIXEL_ID = ''; // e.g. '123456789012345'
    ============================================================ */
 function initTracking() {
   if (GA4_ID) {
-    // <!-- GA4 slot — uncomment and fill GA4_ID -->
-    // const s = document.createElement('script');
-    // s.src = `https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`;
-    // s.async = true;
-    // document.head.appendChild(s);
-    // window.dataLayer = window.dataLayer || [];
-    // function gtag(){dataLayer.push(arguments);}
-    // gtag('js', new Date());
-    // gtag('config', GA4_ID);
+    const s = document.createElement('script');
+    s.src = `https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`;
+    s.async = true;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { dataLayer.push(arguments); };
+    gtag('js', new Date());
+    gtag('config', GA4_ID);
   }
 
   if (ADS_ID) {
