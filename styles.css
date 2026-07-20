@@ -463,24 +463,26 @@ section {
 }
 
 .hero-founder-head {
+  margin-bottom: 14px;
+}
+
+.hero-founder-body {
   display: flex;
-  align-items: center;
-  gap: 14px;
-  margin-bottom: 16px;
+  align-items: flex-start;
+  gap: 18px;
 }
 
 .hero-founder-photo {
-  width: 72px;
-  height: 72px;
+  width: 160px;
+  height: auto;
   flex-shrink: 0;
-  border-radius: 50%;
+  border-radius: var(--radius-card);
   object-fit: cover;
-  object-position: center top;
   box-shadow: var(--shadow-base);
   border: 2px solid var(--gold);
 }
 
-.hero-founder-id { min-width: 0; }
+.hero-founder-text { min-width: 0; }
 
 .hero-founder-name {
   font-family: 'Lora', Georgia, serif;
@@ -1474,6 +1476,8 @@ section {
 
 @media (max-width: 480px) {
   .footer-inner { grid-template-columns: 1fr; }
+  .hero-founder-body { flex-direction: column; }
+  .hero-founder-photo { width: 200px; }
   .trust-chips { gap: 8px; }
   .trust-chip { font-size: 12px; padding: 7px 12px; }
   .stat-number { font-size: 36px; }
