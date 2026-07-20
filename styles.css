@@ -1476,8 +1476,32 @@ section {
 
 @media (max-width: 480px) {
   .footer-inner { grid-template-columns: 1fr; }
-  .hero-founder-body { flex-direction: column; }
-  .hero-founder-photo { width: 200px; }
+  /* Founder block: circle photo + name/title in a row, bio below */
+  .hero-founder {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 14px;
+    align-items: center;
+  }
+  .hero-founder-body { display: contents; }
+  .hero-founder-head {
+    grid-column: 2;
+    grid-row: 1;
+    margin-bottom: 0;
+  }
+  .hero-founder-photo {
+    grid-column: 1;
+    grid-row: 1;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-position: center top;
+  }
+  .hero-founder-text {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    margin-top: 14px;
+  }
   .trust-chips { gap: 8px; }
   .trust-chip { font-size: 12px; padding: 7px 12px; }
   .stat-number { font-size: 36px; }
