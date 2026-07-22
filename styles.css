@@ -36,7 +36,7 @@
 html {
   scroll-behavior: smooth;
   /* Offset anchor scrolls so targets clear the fixed header */
-  scroll-padding-top: 290px;
+  scroll-padding-top: 255px;
 }
 
 body {
@@ -255,7 +255,8 @@ section {
 }
 
 .header-logo img {
-  width: 100%;
+  width: 485px;
+  max-width: 100%;
   height: auto;
   display: block;
 }
@@ -377,7 +378,7 @@ section {
    HERO
    ============================================================ */
 .hero {
-  padding-top: 300px;
+  padding-top: 265px;
   padding-bottom: 80px;
   background: linear-gradient(170deg, var(--white) 60%, var(--cream) 100%);
   position: relative;
