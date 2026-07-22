@@ -242,7 +242,7 @@ section {
   grid-template-columns: 55fr 45fr;
   gap: 56px;
   align-items: center;
-  padding: 14px 0 6px;
+  padding: 14px 0 3px;
 }
 
 .header-logo {
