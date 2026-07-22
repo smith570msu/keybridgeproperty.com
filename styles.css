@@ -36,7 +36,7 @@
 html {
   scroll-behavior: smooth;
   /* Offset anchor scrolls so targets clear the fixed header */
-  scroll-padding-top: 240px;
+  scroll-padding-top: 200px;
 }
 
 body {
@@ -242,7 +242,7 @@ section {
   grid-template-columns: 55fr 45fr;
   gap: 56px;
   align-items: center;
-  padding: 14px 0 3px;
+  padding: 14px 0 0;
 }
 
 .header-logo {
@@ -378,7 +378,7 @@ section {
    HERO
    ============================================================ */
 .hero {
-  padding-top: 250px;
+  padding-top: 210px;
   padding-bottom: 80px;
   background: linear-gradient(170deg, var(--white) 60%, var(--cream) 100%);
   position: relative;
@@ -1488,9 +1488,9 @@ section {
   .header-logo { width: auto; }
   .header-logo img { width: 300px; max-width: 86vw; }
   .header-call { display: none; }
-  :root { scroll-padding-top: 180px; }
+  :root { scroll-padding-top: 140px; }
 
-  .hero { padding-top: 200px; padding-bottom: 56px; }
+  .hero { padding-top: 150px; padding-bottom: 56px; }
   .hero-inner { grid-template-columns: 1fr; gap: 36px; }
 
   .stat-bar-inner { grid-template-columns: 1fr; gap: 32px; }
