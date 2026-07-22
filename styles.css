@@ -35,8 +35,8 @@
 
 html {
   scroll-behavior: smooth;
-  /* Offset anchor scrolls so targets clear the fixed 191px header */
-  scroll-padding-top: 200px;
+  /* Offset anchor scrolls so targets clear the fixed header */
+  scroll-padding-top: 290px;
 }
 
 body {
@@ -242,7 +242,7 @@ section {
   grid-template-columns: 55fr 45fr;
   gap: 56px;
   align-items: center;
-  height: 190px;
+  padding: 16px 0;
 }
 
 .header-logo {
@@ -251,6 +251,13 @@ section {
   gap: 12px;
   text-decoration: none;
   justify-self: start;
+  width: 100%;
+}
+
+.header-logo img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* "Call us today" block — centered above the offer form */
@@ -294,14 +301,6 @@ section {
 
 .header-call:hover .header-call-number { color: var(--gold); }
 
-.header-logo img {
-  height: 44px;
-  width: auto;
-  display: block;
-}
-
-/* NOTE: logo is on a semi-transparent white background. A PNG with transparent
-   background would look cleaner — swap the URL with a transparent SVG/PNG when available. */
 .header-wordmark {
   font-family: 'Figtree', sans-serif;
   font-weight: 600;
@@ -378,7 +377,7 @@ section {
    HERO
    ============================================================ */
 .hero {
-  padding-top: 230px;
+  padding-top: 300px;
   padding-bottom: 80px;
   background: linear-gradient(170deg, var(--white) 60%, var(--cream) 100%);
   position: relative;
@@ -1485,7 +1484,10 @@ section {
 
   /* Single centered logo on mobile; sticky bottom bar handles calling */
   .header-inner { display: flex; justify-content: center; }
+  .header-logo { width: auto; }
+  .header-logo img { width: 300px; max-width: 86vw; }
   .header-call { display: none; }
+  :root { scroll-padding-top: 180px; }
 
   .hero { padding-top: 200px; padding-bottom: 56px; }
   .hero-inner { grid-template-columns: 1fr; gap: 36px; }
