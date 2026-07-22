@@ -263,8 +263,11 @@ section {
 
 /* "Call us today" block — centered above the offer form */
 .header-call {
-  justify-self: center;
-  display: inline-flex;
+  justify-self: end;
+  align-self: start;
+  margin-top: 67px;   /* aligns top with the "KEYBRIDGE" wordmark line */
+  width: 284px;       /* matches the wordmark text width in the logo */
+  display: flex;
   flex-direction: column;
   align-items: center;
   gap: 4px;
@@ -691,7 +694,8 @@ section {
 
 /* Form submit button hover: navy to navy-gold gradient with lift */
 .btn-submit {
-  background: var(--navy);
+  /* Green pulled from the founder photo so it complements rather than clashes */
+  background: #6b8e4f;
   color: var(--white);
   border: none;
   width: 100%;
@@ -706,9 +710,9 @@ section {
 }
 
 .btn-submit:hover {
-  background: linear-gradient(135deg, var(--navy) 40%, #1e3a6e 100%);
+  background: linear-gradient(135deg, #6b8e4f 40%, #5c7a42 100%);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(20,38,76,0.22);
+  box-shadow: 0 8px 24px rgba(107,142,79,0.28);
 }
 
 /* Success state */
