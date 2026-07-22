@@ -381,7 +381,7 @@ section {
    HERO
    ============================================================ */
 .hero {
-  padding-top: 210px;
+  padding-top: 220px;
   padding-bottom: 80px;
   background: linear-gradient(170deg, var(--white) 60%, var(--cream) 100%);
   position: relative;
