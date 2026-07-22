@@ -238,9 +238,10 @@ section {
 }
 
 .header-inner {
-  display: flex;
+  display: grid;
+  grid-template-columns: 55fr 45fr;
+  gap: 56px;
   align-items: center;
-  justify-content: space-between;
   height: 190px;
 }
 
@@ -249,7 +250,49 @@ section {
   align-items: center;
   gap: 12px;
   text-decoration: none;
+  justify-self: start;
 }
+
+/* "Call us today" block — centered above the offer form */
+.header-call {
+  justify-self: center;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+  padding: 10px 26px;
+  border: 1.5px solid var(--line-white);
+  border-radius: var(--radius-card);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.header-call:hover {
+  border-color: var(--gold);
+  box-shadow: 0 4px 16px rgba(20,38,76,0.08);
+}
+
+.header-call-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: 'Figtree', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.header-call-number {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--navy);
+  line-height: 1.1;
+}
+
+.header-call:hover .header-call-number { color: var(--gold); }
 
 .header-logo img {
   height: 44px;
@@ -1439,6 +1482,10 @@ section {
   .header-wordmark { display: none; }
   .mobile-call-btn { display: flex; }
   .header-phone { display: none; }
+
+  /* Single centered logo on mobile; sticky bottom bar handles calling */
+  .header-inner { display: flex; justify-content: center; }
+  .header-call { display: none; }
 
   .hero { padding-top: 200px; padding-bottom: 56px; }
   .hero-inner { grid-template-columns: 1fr; gap: 36px; }
