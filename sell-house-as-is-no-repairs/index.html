@@ -186,7 +186,7 @@
                   </div>
                   <div class="form-group">
                     <label for="last-name">Last name</label>
-                    <input type="text" id="last-name" name="last_name" placeholder="Smith" autocomplete="family-name">
+                    <input type="text" id="last-name" name="last_name" placeholder="Smith" autocomplete="family-name" required>
                   </div>
                 </div>
                 <div class="form-group">
@@ -194,12 +194,12 @@
                   <input type="tel" id="phone" name="phone" placeholder="(248) 555-0100" autocomplete="tel" required>
                 </div>
                 <div class="form-group">
-                  <label for="email">Email <span style="font-weight:400;color:var(--slate)">(optional)</span></label>
-                  <input type="email" id="email" name="email" placeholder="jane@example.com" autocomplete="email">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" placeholder="jane@example.com" autocomplete="email" required>
                 </div>
                 <div class="form-group">
-                  <label for="address">Property address</label>
-                  <input type="text" id="address" name="property_address" placeholder="123 Main St, Detroit, MI" autocomplete="street-address" required>
+                  <label for="address">Property address <span style="font-weight:400;color:var(--slate)">(optional)</span></label>
+                  <input type="text" id="address" name="property_address" placeholder="123 Main St, Detroit, MI" autocomplete="street-address">
                 </div>
                 <div class="hp-field" aria-hidden="true">
                   <input type="text" name="hp_name" tabindex="-1" autocomplete="off">

@@ -275,6 +275,23 @@ function initForm() {
   const honeypot    = form.querySelector('.hp-field input');
   const loadTime    = Date.now();
 
+  // Enable "Get My Offer" only once every required field is filled and valid.
+  // Driven by the `required` attributes in the HTML (all fields except address).
+  const submitBtn      = document.getElementById('form-submit-btn');
+  const requiredInputs = [...form.querySelectorAll('input[required]')];
+  function fieldOk(inp) {
+    const v = inp.value.trim();
+    if (!v) return false;
+    if (inp.type === 'email') return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+    if (inp.type === 'tel')   return v.replace(/\D/g, '').length >= 10;
+    return true;
+  }
+  function updateSubmitState() {
+    if (submitBtn) submitBtn.disabled = !requiredInputs.every(fieldOk);
+  }
+  form.addEventListener('input', updateSubmitState);
+  updateSubmitState();
+
   // Basic client-side validation
   function validate() {
     const email = form.querySelector('[name="email"]');

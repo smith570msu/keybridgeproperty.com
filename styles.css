@@ -724,6 +724,16 @@ section {
   box-shadow: 0 8px 24px rgba(107,142,79,0.28);
 }
 
+.btn-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.btn-submit:disabled:hover {
+  background: #6b8e4f;
+  transform: none;
+  box-shadow: none;
+}
+
 /* Success state */
 .form-success {
   display: none;
