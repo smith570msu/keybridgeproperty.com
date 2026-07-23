@@ -277,7 +277,7 @@ function initForm() {
 
   // Enable "Get My Offer" only once every required field is filled and valid.
   // Driven by the `required` attributes in the HTML (all fields except address).
-  const submitBtn      = document.getElementById('form-submit-btn');
+  const submitBtn      = form.querySelector('button[type="submit"], .btn-submit');
   const requiredInputs = [...form.querySelectorAll('input[required]')];
   function fieldOk(inp) {
     const v = inp.value.trim();
